@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Model files (tracked via Git LFS)
+models/
+!models/best_model.pth
+*.pth
+!models/*.pth
+*.pt
+*.pkl
+*.h5
+
+# Dataset images (too large for git, but allow sample images)
+breast_mri_dataset/**/*.jpg
+breast_mri_dataset/**/*.jpeg
+breast_mri_dataset/**/*.png
+!breast_mri_dataset/**/sample_*.jpg
+!breast_mri_dataset/**/sample_*.jpeg
+!breast_mri_dataset/**/sample_*.png
+
+# Results outputs - allow these files to be tracked
+# results/*.png
+# results/*.csv
+# results/*.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+

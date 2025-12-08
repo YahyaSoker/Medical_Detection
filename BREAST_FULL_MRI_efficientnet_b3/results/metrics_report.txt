@@ -1,0 +1,46 @@
+============================================================
+BREAST CANCER MRI CLASSIFICATION - EVALUATION REPORT
+============================================================
+
+ACCURACY TABLE
+------------------------------------------------------------
+Metric                         Value (%)      
+------------------------------------------------------------
+Overall Accuracy               99.53          
+Benign Accuracy                99.83          
+Malignant Accuracy             99.22          
+
+
+PER-CLASS METRICS
+------------------------------------------------------------
+Class           Precision    Recall       F1-Score    
+--------------------------------------------------
+Benign          0.9923       0.9983       0.9953      
+Malignant       0.9983       0.9922       0.9953      
+
+
+MACRO AVERAGES
+------------------------------------------------------------
+Precision: 0.9953
+Recall: 0.9953
+F1-Score: 0.9953
+ROC-AUC: 0.9998
+
+
+CONFUSION MATRIX
+------------------------------------------------------------
+                Predicted Benign     Predicted Malignant 
+True Benign     1799                 3                   
+True Malignant  14                   1788                
+
+
+CLASSIFICATION REPORT
+------------------------------------------------------------
+              precision    recall  f1-score   support
+
+      Benign       0.99      1.00      1.00      1802
+   Malignant       1.00      0.99      1.00      1802
+
+    accuracy                           1.00      3604
+   macro avg       1.00      1.00      1.00      3604
+weighted avg       1.00      1.00      1.00      3604

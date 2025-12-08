@@ -1,0 +1,21 @@
+# Dataset Directory Structure
+# 
+# This directory should contain your breast MRI dataset organized as follows:
+#
+# breast_mri_dataset/
+#   ├── train/
+#   │   ├── Benign/
+#   │   │   └── [JPG images]
+#   │   └── Malignant/
+#   │       └── [JPG images]
+#   ├── val/
+#   │   ├── Benign/
+#   │   │   └── [JPG images]
+#   │   └── Malignant/
+#   │       └── [JPG images]
+#   └── test/
+#       ├── Benign/
+#       │   └── [JPG images]
+#       └── Malignant/
+#           └── [JPG images]
+
