@@ -314,7 +314,7 @@ This worktree combines various medical AI applications and leverages:
 
 ---
 
-**Last Updated**: 2024  
-**Maintainer**: Medical AI Research Team  
+**Last Updated**: 2025  
+**Maintainer**: Yahya 
 **Status**: Active Development
 
