@@ -1,0 +1,1281 @@
+{
+  "model_path": "Yolo_Detection_Mamografi_31.08.2025.pt",
+  "input_directory": "mamografi_sample_dataset_31.08.2025",
+  "output_directory": "pred",
+  "processing_date": "2025-09-01T02:23:39.973272",
+  "total_images_processed": 62,
+  "results": [
+    {
+      "image_name": "Kategori2Sag_11140_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sag_11140_RCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1325.672119140625,
+            278.92962646484375,
+            1429.0924072265625,
+            371.55194091796875
+          ],
+          "confidence": 0.32094308733940125,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 526.1319999990519,
+      "image_size": {
+        "width": 1770,
+        "height": 2370
+      }
+    },
+    {
+      "image_name": "Kategori2Sag_11140_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sag_11140_RCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1325.672119140625,
+            278.92962646484375,
+            1429.0924072265625,
+            371.55194091796875
+          ],
+          "confidence": 0.32094308733940125,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 496.8504999997094,
+      "image_size": {
+        "width": 1770,
+        "height": 2370
+      }
+    },
+    {
+      "image_name": "Kategori2Sag_11180_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sag_11180_RCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 430.2428000009968,
+      "image_size": {
+        "width": 1770,
+        "height": 2370
+      }
+    },
+    {
+      "image_name": "Kategori2Sag_11180_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sag_11180_RCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 411.9291000024532,
+      "image_size": {
+        "width": 1770,
+        "height": 2370
+      }
+    },
+    {
+      "image_name": "Kategori2Sol_11349_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sol_11349_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            211.88821411132812,
+            1664.0128173828125,
+            691.2879638671875,
+            2002.2906494140625
+          ],
+          "confidence": 0.28918948769569397,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 454.9563000036869,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori2Sol_11349_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sol_11349_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            211.88821411132812,
+            1664.0128173828125,
+            691.2879638671875,
+            2002.2906494140625
+          ],
+          "confidence": 0.28918948769569397,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 464.6135999937542,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori2Sol_11467_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sol_11467_LCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 450.5890000000363,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori2Sol_11467_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sol_11467_LCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 484.636799999862,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori2Sol_11495_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sol_11495_LCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            287.1006774902344,
+            2248.897216796875,
+            401.08343505859375,
+            2363.189697265625
+          ],
+          "confidence": 0.6205211281776428,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 430.24809999769786,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori2Sol_11495_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori2Sol_11495_LCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            287.1006774902344,
+            2248.897216796875,
+            401.08343505859375,
+            2363.189697265625
+          ],
+          "confidence": 0.6205211281776428,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 452.5913000034052,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sag_11798_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sag_11798_RMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 473.72339999856194,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sag_11798_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sag_11798_RMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 499.03639999683946,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sag_11877_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sag_11877_RCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            403.4885559082031,
+            1367.4775390625,
+            594.7621459960938,
+            1551.0111083984375
+          ],
+          "confidence": 0.41647282242774963,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 494.5941000041785,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sag_11877_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sag_11877_RCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            403.4885559082031,
+            1367.4775390625,
+            594.7621459960938,
+            1551.0111083984375
+          ],
+          "confidence": 0.41647282242774963,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 466.44950000336394,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sag_11885_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sag_11885_RCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 487.46720000053756,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sag_11885_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sag_11885_RCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 461.281500000041,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_11956_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_11956_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 478.9297000024817,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_11956_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_11956_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 453.3628999997745,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12033_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12033_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 463.26210000552237,
+      "image_size": {
+        "width": 2800,
+        "height": 3518
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12033_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12033_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 498.4390000026906,
+      "image_size": {
+        "width": 2800,
+        "height": 3518
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12041_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12041_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            432.36651611328125,
+            1581.0640869140625,
+            622.8966674804688,
+            1772.5667724609375
+          ],
+          "confidence": 0.47751641273498535,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            447.5091857910156,
+            1596.9697265625,
+            589.57470703125,
+            1759.1326904296875
+          ],
+          "confidence": 0.25920191407203674,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 512.712299998384,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12041_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12041_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            432.36651611328125,
+            1581.0640869140625,
+            622.8966674804688,
+            1772.5667724609375
+          ],
+          "confidence": 0.47751641273498535,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            447.5091857910156,
+            1596.9697265625,
+            589.57470703125,
+            1759.1326904296875
+          ],
+          "confidence": 0.25920191407203674,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 477.5542999996105,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12082_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12082_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 446.5827000021818,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12082_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12082_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 453.2374999980675,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12137_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12137_LCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            718.5004272460938,
+            1874.0306396484375,
+            865.709716796875,
+            1995.9581298828125
+          ],
+          "confidence": 0.3410395085811615,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 421.469300003082,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12137_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12137_LCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            718.5004272460938,
+            1874.0306396484375,
+            865.709716796875,
+            1995.9581298828125
+          ],
+          "confidence": 0.3410395085811615,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 447.4832999985665,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12139_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12139_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            247.81301879882812,
+            634.3320922851562,
+            524.3860473632812,
+            927.3997192382812
+          ],
+          "confidence": 0.5894661545753479,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 474.0907999948831,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori4Sol_12139_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori4Sol_12139_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            247.81301879882812,
+            634.3320922851562,
+            524.3860473632812,
+            927.3997192382812
+          ],
+          "confidence": 0.5894661545753479,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 438.7672000011662,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12192_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12192_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1925.1060791015625,
+            1043.6126708984375,
+            2271.442138671875,
+            1419.57421875
+          ],
+          "confidence": 0.5092947483062744,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 472.20179999567335,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12192_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12192_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1925.1060791015625,
+            1043.6126708984375,
+            2271.442138671875,
+            1419.57421875
+          ],
+          "confidence": 0.5092947483062744,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 443.1814999989001,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12195_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12195_RCC.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            1808.9266357421875,
+            935.8003540039062,
+            2112.33642578125,
+            1241.572998046875
+          ],
+          "confidence": 0.3337235152721405,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            1862.3521728515625,
+            926.0421752929688,
+            2107.65234375,
+            1181.3232421875
+          ],
+          "confidence": 0.29789161682128906,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 476.78309999901103,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12195_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12195_RCC.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            1808.9266357421875,
+            935.8003540039062,
+            2112.33642578125,
+            1241.572998046875
+          ],
+          "confidence": 0.3337235152721405,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            1862.3521728515625,
+            926.0421752929688,
+            2107.65234375,
+            1181.3232421875
+          ],
+          "confidence": 0.29789161682128906,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 490.60869999811985,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12233_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12233_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1508.123291015625,
+            1936.93115234375,
+            1828.781982421875,
+            2249.97802734375
+          ],
+          "confidence": 0.5816469192504883,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 447.12930000241613,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12233_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12233_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1508.123291015625,
+            1936.93115234375,
+            1828.781982421875,
+            2249.97802734375
+          ],
+          "confidence": 0.5816469192504883,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 485.75659999914933,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12321_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12321_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1989.0946044921875,
+            2061.457275390625,
+            2323.0673828125,
+            2326.336181640625
+          ],
+          "confidence": 0.41056403517723083,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 473.81229999882635,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12321_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12321_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1989.0946044921875,
+            2061.457275390625,
+            2323.0673828125,
+            2326.336181640625
+          ],
+          "confidence": 0.41056403517723083,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 434.6445000046515,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12340_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12340_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1947.9534912109375,
+            1617.14453125,
+            2158.628662109375,
+            1836.974853515625
+          ],
+          "confidence": 0.37111133337020874,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 450.4065000000992,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12340_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12340_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1947.9534912109375,
+            1617.14453125,
+            2158.628662109375,
+            1836.974853515625
+          ],
+          "confidence": 0.37111133337020874,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 487.8670000034617,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12358_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12358_RCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 468.9390999992611,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12358_RCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12358_RCC.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 472.63589999784017,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12391_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12391_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            2017.9222412109375,
+            663.83984375,
+            2277.429443359375,
+            901.0841674804688
+          ],
+          "confidence": 0.6067667007446289,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 429.2076999990968,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sag_12391_RMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sag_12391_RMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            2017.9222412109375,
+            663.83984375,
+            2277.429443359375,
+            901.0841674804688
+          ],
+          "confidence": 0.6067667007446289,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 480.457400000887,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12478_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12478_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 486.7560999991838,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12478_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12478_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 455.58380000147736,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12497_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12497_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            530.4376831054688,
+            1192.2626953125,
+            713.7344970703125,
+            1367.8492431640625
+          ],
+          "confidence": 0.5672525763511658,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            691.3641357421875,
+            895.4521484375,
+            814.6220092773438,
+            1007.4953002929688
+          ],
+          "confidence": 0.44002771377563477,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 442.0490999982576,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12497_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12497_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            530.4376831054688,
+            1192.2626953125,
+            713.7344970703125,
+            1367.8492431640625
+          ],
+          "confidence": 0.5672525763511658,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            691.3641357421875,
+            895.4521484375,
+            814.6220092773438,
+            1007.4953002929688
+          ],
+          "confidence": 0.44002771377563477,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 480.8582000041497,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12577_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12577_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            222.1560516357422,
+            899.6074829101562,
+            508.3730163574219,
+            1214.7928466796875
+          ],
+          "confidence": 0.46002432703971863,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 454.51309999771183,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12577_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12577_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            222.1560516357422,
+            899.6074829101562,
+            508.3730163574219,
+            1214.7928466796875
+          ],
+          "confidence": 0.46002432703971863,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 467.0159000015701,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12587_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12587_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            265.2695617675781,
+            1764.2501220703125,
+            677.4764404296875,
+            2131.69580078125
+          ],
+          "confidence": 0.5458484888076782,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            156.00148010253906,
+            11.272400856018066,
+            272.5970153808594,
+            122.05862426757812
+          ],
+          "confidence": 0.42133158445358276,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 503.4780000059982,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12587_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12587_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            265.2695617675781,
+            1764.2501220703125,
+            677.4764404296875,
+            2131.69580078125
+          ],
+          "confidence": 0.5458484888076782,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            156.00148010253906,
+            11.272400856018066,
+            272.5970153808594,
+            122.05862426757812
+          ],
+          "confidence": 0.42133158445358276,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 515.8116000020527,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12590_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12590_LCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            2.104184150695801,
+            1259.4495849609375,
+            205.1387176513672,
+            1509.5108642578125
+          ],
+          "confidence": 0.5971732139587402,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 472.3586999971303,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12590_LCC.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12590_LCC.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            2.104184150695801,
+            1259.4495849609375,
+            205.1387176513672,
+            1509.5108642578125
+          ],
+          "confidence": 0.5971732139587402,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 483.2399999941117,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12595_LMLO (1).png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12595_LMLO (1).png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            69.8338623046875,
+            1101.4100341796875,
+            667.9102172851562,
+            1754.068115234375
+          ],
+          "confidence": 0.27419862151145935,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 511.6764000049443,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12595_LMLO (1).png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12595_LMLO (1).png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            69.8338623046875,
+            1101.4100341796875,
+            667.9102172851562,
+            1754.068115234375
+          ],
+          "confidence": 0.27419862151145935,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 498.1781999958912,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12595_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12595_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            69.8338623046875,
+            1101.4100341796875,
+            667.9102172851562,
+            1754.068115234375
+          ],
+          "confidence": 0.27419862151145935,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 466.5631000025314,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12595_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12595_LMLO.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            69.8338623046875,
+            1101.4100341796875,
+            667.9102172851562,
+            1754.068115234375
+          ],
+          "confidence": 0.27419862151145935,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 472.63070000190055,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12615_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12615_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 518.2100999954855,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12615_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12615_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 500.54670000099577,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12661_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12661_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            34.464691162109375,
+            975.232666015625,
+            215.83071899414062,
+            1169.689208984375
+          ],
+          "confidence": 0.26596134901046753,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            0.0,
+            2037.5186767578125,
+            54.71283721923828,
+            2112.65673828125
+          ],
+          "confidence": 0.25757983326911926,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 475.8762999990722,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12661_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12661_LMLO.png",
+      "total_detections": 2,
+      "detections": [
+        {
+          "bbox": [
+            34.464691162109375,
+            975.232666015625,
+            215.83071899414062,
+            1169.689208984375
+          ],
+          "confidence": 0.26596134901046753,
+          "class_id": 0,
+          "class_name": "cancer"
+        },
+        {
+          "bbox": [
+            0.0,
+            2037.5186767578125,
+            54.71283721923828,
+            2112.65673828125
+          ],
+          "confidence": 0.25757983326911926,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 477.5124000007054,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12664_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12664_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 466.9958000013139,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "Kategori5Sol_12664_LMLO.png",
+      "image_path": "mamografi_sample_dataset_31.08.2025\\Kategori5Sol_12664_LMLO.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 450.74010000098497,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    }
+  ]
+}
