@@ -14,7 +14,7 @@ This repository consolidates several medical AI applications that leverage state
 ## 📁 Project Structure
 
 ```
-ccw/
+/
 ├── Brain_Cancer/                          # Brain tumor classification system
 │   ├── train_model.py                     # Training script with ResNet50
 │   ├── predict_single.py                  # Single image prediction
