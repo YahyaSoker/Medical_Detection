@@ -47,6 +47,17 @@ DAI/
 │   ├── models/                            # Trained dental models
 │   └── dataset/                           # Dental image datasets
 │
+├── Skin_Cancer/                            # Skin cancer detection with interpretable AI
+│   ├── src/                               # Source code modules
+│   │   ├── main.py                        # Main entry point
+│   │   ├── skin_cancer_cnn.py             # CNN with GradCAM implementation
+│   │   ├── skin_cancer_yolo.py            # YOLO approach (demonstration)
+│   │   ├── skin_cancer_visualizer.py      # Visualization tools
+│   │   └── professional_gradcam.py       # Professional GradCAM visualization
+│   ├── models/                            # Trained models
+│   ├── outputs/                           # Generated visualizations and reports
+│   └── data/                              # HAM10000 dataset files
+│
 └── Bone_Death_Tissue_Segmentation/         # Bone necrosis tissue segmentation
     ├── simple_test.py                     # Tissue segmentation testing
     └── DIA*.pth                           # Trained segmentation models
@@ -104,7 +115,28 @@ DAI/
   - Comprehensive training pipeline
   - Model evaluation and metrics
 
-### 3. Dental & Orthopedic Applications
+### 3. Skin Cancer Detection
+
+**Skin_Cancer/** - Dermoscopic lesion classification with interpretable AI
+- **Technology**: EfficientNet-B0 with GradCAM visualization
+- **Dataset**: HAM10000 (10,015 dermoscopic images)
+- **Task**: Multi-class classification of 7 skin lesion types
+- **Classes**: 
+  - **Malignant**: Melanoma (mel), Basal cell carcinoma (bcc)
+  - **Benign**: Melanocytic nevus (nv), Benign keratosis (bkl), Actinic keratosis (akiec), Vascular lesion (vasc), Dermatofibroma (df)
+- **Features**:
+  - Interpretable predictions with GradCAM heatmaps
+  - Shows which parts of the image influence the prediction
+  - Professional medical-grade visualization
+  - Comprehensive analysis reports (HTML)
+  - Dataset distribution analysis
+  - Model performance comparison
+  - Attention visualization for clinical interpretability
+- **Approaches**:
+  - **CNN with GradCAM** (Recommended): High accuracy with interpretable heatmaps
+  - **YOLO** (Demonstration): Included for educational purposes
+
+### 4. Dental & Orthopedic Applications
 
 **Tooth_Decay/** - Dental restoration segmentation
 - **Technology**: DeepLabV3-ResNet50
@@ -143,8 +175,9 @@ DAI/
 ### Model Architectures
 - **ResNet50**: Transfer learning for classification
 - **DeepLabV3**: Semantic segmentation
-- **EfficientNet**: Efficient classification models
+- **EfficientNet**: Efficient classification models (B0, B3)
 - **YOLO**: Real-time object detection
+- **GradCAM**: Interpretable AI visualization for medical diagnosis
 
 ## 🚀 Getting Started
 
@@ -196,11 +229,13 @@ pip install streamlit    # For web interfaces
    - LLM-powered medical report generation
    - Interactive diagnostic assistance
    - Context-aware medical consultations
+   - Interpretable AI with GradCAM heatmaps for clinical transparency
 
 ### 4. **Comprehensive Analysis**
    - Statistical summaries
    - Visual result generation
-   - Export capabilities (JSON, images, reports)
+   - Export capabilities (JSON, images, HTML reports)
+   - Interpretable heatmaps showing model decision-making process
 
 ## 🎓 Usage Examples
 
@@ -232,6 +267,19 @@ python train.py    # Train model
 python predict.py  # Make predictions
 ```
 
+### Skin Cancer Detection with GradCAM
+```bash
+cd Skin_Cancer
+# Train CNN model with GradCAM visualization
+python src/main.py --mode cnn --train --epochs 20
+
+# Make prediction with interpretable heatmap
+python src/main.py --mode cnn --predict "path/to/skin_image.jpg"
+
+# Generate comprehensive visualizations
+python src/main.py --mode visualize
+```
+
 ## 📈 Model Performance & Evaluation
 
 Each application includes comprehensive evaluation metrics:
@@ -255,6 +303,7 @@ This worktree demonstrates a complete medical AI workflow:
 ## 🏥 Medical Domains Covered
 
 - **Oncology**: Brain cancer, breast cancer detection and segmentation
+- **Dermatology**: Skin cancer detection with interpretable AI (melanoma, basal cell carcinoma, benign lesions)
 - **Dentistry**: Tooth decay and restoration identification
 - **Orthopedics**: Bone necrosis tissue segmentation
 - **Radiology**: Mammography and MRI analysis
