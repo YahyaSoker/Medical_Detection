@@ -1,0 +1,127 @@
+{
+  "model_path": "models\\Yolo_Detection_Mamografi_31.08.2025.pt",
+  "input_directory": "target",
+  "output_directory": "pred",
+  "processing_date": "2025-11-07T22:03:24.370338",
+  "total_images_processed": 6,
+  "results": [
+    {
+      "image_name": "1.png",
+      "image_path": "target\\1.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 43.70809999818448,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "1.png",
+      "image_path": "target\\1.png",
+      "total_detections": 0,
+      "detections": [],
+      "processing_time": 20.056699999258853,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      }
+    },
+    {
+      "image_name": "2.png",
+      "image_path": "target\\2.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1989.077880859375,
+            2061.43798828125,
+            2323.069091796875,
+            2326.347412109375
+          ],
+          "confidence": 0.41051438450813293,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 62.99540000327397,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      },
+      "llm_explanation": "**Summary:**\n\nThe algorithm detected a potential tumor in the image.\n\n**Explanation:**\n\nThe model found a possible abnormality in the image that may be related to cancer. This detection is based on computer analysis and should be reviewed by a qualified specialist for further evaluation and interpretation.\n\n**Confidence Score:**\n\nThe confidence score for this detection is 41%, indicating some uncertainty. Reasons for uncertainty include the complexity of the image and the possibility of other explanations for the detected abnormality.\n\n**Possible Explanations:**\n\nTwo possible explanations for this finding are:\n\n1. A benign cyst or other non-cancerous growth\n2. A neoplasm (tumor) that may be cancerous\n\n**Model Limitations:**\n\nThe algorithm is not perfect and may not always accurately detect tumors. Other factors, such as image quality and patient-specific characteristics, can also affect the accuracy of the detection.\n\n**Next Steps:**\n\nRecommend specialist review to further evaluate and interpret this finding. Further imaging or other diagnostic tests may be considered to gather more information.\n\n**No Urgent Features Detected:**\n\nThis detection does not indicate any urgent or red-flag features that require immediate clinical attention."
+    },
+    {
+      "image_name": "2.png",
+      "image_path": "target\\2.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            1989.077880859375,
+            2061.43798828125,
+            2323.069091796875,
+            2326.347412109375
+          ],
+          "confidence": 0.41051438450813293,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 19.97970000229543,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      },
+      "llm_explanation": ""
+    },
+    {
+      "image_name": "3.png",
+      "image_path": "target\\3.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            2017.9189453125,
+            663.8323364257812,
+            2277.440185546875,
+            901.1142578125
+          ],
+          "confidence": 0.6067248582839966,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 19.26820000517182,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      },
+      "llm_explanation": "**Summary:**\n\nThe algorithm detected a potential tumor-like structure in the image.\n\n**Explanation:**\n\nThe model found a possible abnormality in the image that may be related to cancer. This finding is based on computer analysis of the image and should be further evaluated by a qualified specialist to determine its significance.\n\n**Uncertainty and Limitations:**\n\nThe confidence score for this detection is 61%, indicating some uncertainty. The model's performance may be affected by factors such as image quality, patient variability, and the complexity of the anatomy being examined. Additionally, the algorithm is not capable of differentiating between benign and malignant lesions without further evaluation.\n\n**Possible Explanations:**\n\nThis finding could be due to a variety of reasons, including a benign cyst or a neoplasm. A qualified specialist would need to review the image and consider additional information, such as patient history and clinical presentation, to determine the most likely explanation.\n\n**Next Steps:**\n\nRecommend specialist review to further evaluate this finding and determine its significance. Further imaging may be considered to gather more information about the abnormality.\n\n**No Urgent Features Detected.**\n\nThis summary is intended for informational purposes only and should not be used as a substitute for a qualified specialist's evaluation."
+    },
+    {
+      "image_name": "3.png",
+      "image_path": "target\\3.png",
+      "total_detections": 1,
+      "detections": [
+        {
+          "bbox": [
+            2017.9189453125,
+            663.8323364257812,
+            2277.440185546875,
+            901.1142578125
+          ],
+          "confidence": 0.6067248582839966,
+          "class_id": 0,
+          "class_name": "cancer"
+        }
+      ],
+      "processing_time": 65.57959999918239,
+      "image_size": {
+        "width": 2364,
+        "height": 2964
+      },
+      "llm_explanation": ""
+    }
+  ]
+}

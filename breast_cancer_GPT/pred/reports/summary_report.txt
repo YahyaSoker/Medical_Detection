@@ -1,0 +1,22 @@
+YOLO PREDICTION SUMMARY REPORT
+==================================================
+Processing Date: 2025-11-07 22:03:24
+Model: models\Yolo_Detection_Mamografi_31.08.2025.pt
+Input Directory: target
+Output Directory: pred
+
+PROCESSING STATISTICS
+------------------------------
+Total Images: 6
+Successfully Processed: 6
+Failed: 0
+Success Rate: 100.0%
+
+DETECTION STATISTICS
+------------------------------
+Total Detections: 4
+Average Detections per Image: 0.67
+
+DETECTIONS BY CLASS
+------------------------------
+cancer: 4
