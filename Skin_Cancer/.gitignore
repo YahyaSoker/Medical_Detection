@@ -1,0 +1,74 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Dataset image folders (large, download separately)
+HAM10000_images_part_1/
+HAM10000_images_part_2/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+*.swp
+*.swo
+*~
+
+# Model files (optional - uncomment if you don't want to track model files)
+# *.pth
+# *.pt
+# *.h5
+# *.ckpt
+
+# Output files (optional - uncomment if you don't want to track generated outputs)
+# *.png
+# *.jpg
+# *.html
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# PyTorch
+*.pth
+*.pt
+
+# Environment variables
+.env
+.env.local
+
