@@ -58,6 +58,12 @@ DAI/
 │   ├── outputs/                           # Generated visualizations and reports
 │   └── data/                              # HAM10000 dataset files
 │
+├── Bone _Fracture/                         # YOLO-based bone fracture detection (X-ray)
+│   ├── train.py                            # Ultralytics YOLO training script
+│   ├── data.yaml                           # Dataset configuration (classes, paths)
+│   ├── models/                             # Trained weights (e.g., best.pt)
+│   └── results/                            # Training metrics, curves, confusion matrices
+│
 └── Bone_Death_Tissue_Segmentation/         # Bone necrosis tissue segmentation
     ├── simple_test.py                     # Tissue segmentation testing
     └── DIA*.pth                           # Trained segmentation models
@@ -147,6 +153,15 @@ DAI/
   - Color-coded visualization
   - Detailed statistics per category
   - Composite result visualization
+
+**Bone _Fracture/** - Bone fracture detection (object detection)
+- **Technology**: Ultralytics YOLO
+- **Task**: Detect and classify fracture findings in X-ray images
+- **Classes**: 7 classes (see `Bone _Fracture/data.yaml`)
+- **Features**:
+  - Config-driven training (`data.yaml`)
+  - Saved training curves/metrics and confusion matrices under `Bone _Fracture/results/`
+  - Trained weights stored under `Bone _Fracture/models/`
 
 **Bone_Death_Tissue_Segmentation/** - Bone necrosis detection
 - **Technology**: Deep learning segmentation models
@@ -260,6 +275,13 @@ python predict.py
 # Processes images from target/data/ and saves to target/pred/
 ```
 
+### Bone Fracture Detection (YOLO Training)
+```bash
+cd "Bone _Fracture"
+pip install -r requirements.txt
+python train.py --model yolo12s --data data.yaml --epochs 100 --device cuda
+```
+
 ### MRI Breast Cancer Classification
 ```bash
 cd BREAST_FULL_MRI_efficientnet_b3
@@ -305,7 +327,7 @@ This worktree demonstrates a complete medical AI workflow:
 - **Oncology**: Brain cancer, breast cancer detection and segmentation
 - **Dermatology**: Skin cancer detection with interpretable AI (melanoma, basal cell carcinoma, benign lesions)
 - **Dentistry**: Tooth decay and restoration identification
-- **Orthopedics**: Bone necrosis tissue segmentation
+- **Orthopedics**: Bone fracture detection, bone necrosis tissue segmentation
 - **Radiology**: Mammography and MRI analysis
 
 ## ⚠️ Important Notes
@@ -344,10 +366,10 @@ Each subdirectory contains detailed README files with:
 
 ## 🔗 Related Resources
 
-- PyTorch Documentation: https://pytorch.org/docs/
-- Ultralytics YOLO: https://docs.ultralytics.com/
+- PyTorch Documentation: [https://pytorch.org/docs/](https://pytorch.org/docs/)
+- Ultralytics YOLO: [https://docs.ultralytics.com/](https://docs.ultralytics.com/)
 - Medical Imaging Datasets: Various public and private sources
-- Streamlit: https://docs.streamlit.io/
+- Streamlit: [https://docs.streamlit.io/](https://docs.streamlit.io/)
 
 ## 📄 License
 
