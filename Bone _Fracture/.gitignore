@@ -30,7 +30,7 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Image files
+# Image files (ignore by default)
 *.jpg
 *.jpeg
 *.png
@@ -41,4 +41,12 @@ Thumbs.db
 *.webp
 *.ico
 *.svg
+
+# Exception: Allow images in training results directories (plots, confusion matrices, etc.)
+!results/train_*/
+!results/train_*/**/*.png
+!results/train_*/**/*.jpg
+!results/train_*/**/*.jpeg
+
+# Note: results/model_output/ images are still ignored (inference outputs)
 
