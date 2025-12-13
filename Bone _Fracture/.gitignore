@@ -30,5 +30,15 @@ venv/
 .DS_Store
 Thumbs.db
 
-
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.ico
+*.svg
 
