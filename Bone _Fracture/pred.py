@@ -18,7 +18,7 @@ if torch.cuda.is_available():
     torch.cuda.manual_seed_all(RANDOM_SEED)
 
 # === Paths ===
-VAL_IMAGE_DIR = "valid\images"
+VAL_IMAGE_DIR = "target"
 MODEL_PATH    = "models\BoneYolotest1.pt"  # or wherever your model is
 OUTPUT_DIR    = "results\model_output"
 

@@ -48,5 +48,13 @@ Thumbs.db
 !results/train_*/**/*.jpg
 !results/train_*/**/*.jpeg
 
-# Note: results/model_output/ images are still ignored (inference outputs)
+# Exception: Allow images in model_output (inference results) and target (test images)
+!results/model_output/
+!results/model_output/**/*.png
+!results/model_output/**/*.jpg
+!results/model_output/**/*.jpeg
+!target/
+!target/**/*.png
+!target/**/*.jpg
+!target/**/*.jpeg
 
