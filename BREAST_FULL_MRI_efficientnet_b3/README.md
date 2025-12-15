@@ -82,36 +82,36 @@ You can also run scripts directly (`python train.py`, `python evaluate.py`, `pyt
 
 ```mermaid
 flowchart TD
-  A[User runs main.py] --> B{command}
-  B -->|train| C[train.train()]
-  B -->|evaluate| D[evaluate.evaluate(model_path)]
-  B -->|predict| E[predict.main(args)]
+  A["User runs main.py"] --> B{command}
+  B -->|train| C["train.train()"]
+  B -->|evaluate| D["evaluate.evaluate(model_path)"]
+  B -->|predict| E["predict.main(args)"]
 ```
 
 ### Training (standard vs knowledge distillation)
 
 ```mermaid
 flowchart TD
-  A[train.py: train()] --> B[get_device()]
-  B --> C[get_dataloaders(): train/val/test]
+  A["train.py: train()"] --> B["get_device()"]
+  B --> C["get_dataloaders(): train/val/test"]
   C --> D{USE_DISTILLATION?}
 
-  D -->|No| E[get_model(MODEL_NAME, pretrained=True)]
-  E --> F[criterion = CrossEntropyLoss]
+  D -->|No| E["get_model(MODEL_NAME, pretrained=True)"]
+  E --> F["criterion = CrossEntropyLoss"]
 
-  D -->|Yes| G[Teacher: get_model(TEACHER_MODEL, pretrained=True)]
+  D -->|Yes| G["Teacher: get_model(TEACHER_MODEL, pretrained=True)"]
   G --> H{TEACHER_MODEL_PATH set?}
   H -->|Yes| I[Load teacher checkpoint weights]
   H -->|No| J[Use ImageNet weights]
-  I --> K[Student: get_model(STUDENT_MODEL, pretrained=True)]
+  I --> K["Student: get_model(STUDENT_MODEL, pretrained=True)"]
   J --> K
-  K --> L[distill_criterion = DistillationLoss(T, alpha)]
-  L --> M[criterion = CrossEntropyLoss (validation)]
+  K --> L["distill_criterion = DistillationLoss(T, alpha)"]
+  L --> M["criterion = CrossEntropyLoss (validation)"]
 
   F --> N[Epoch loop]
   M --> N
-  N --> O[train_epoch(): forward + loss + backward + optimizer.step]
-  N --> P[validate(): forward only]
+  N --> O["train_epoch(): forward + loss + backward + optimizer.step"]
+  N --> P["validate(): forward only"]
   P --> Q[Early stopping + save best_model.pth]
   Q --> R[Save final_model.pth + training_history.csv]
 ```
@@ -120,12 +120,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  A[models/*.pth] --> B{Checkpoint format}
-  B -->|Legacy: state_dict only| C[Use config default architecture]
-  B -->|New: metadata checkpoint (state_dict + model_name)| D[Use stored model_name]
-  C --> E[build model + load_state_dict]
+  A["models/*.pth"] --> B{Checkpoint format}
+  B -->|"Legacy: state_dict only"| C[Use config default architecture]
+  B -->|"New: metadata checkpoint (state_dict + model_name)"| D[Use stored model_name]
+  C --> E["build model + load_state_dict"]
   D --> E
-  E --> F[Inference/eval loop]
+  E --> F["Inference/eval loop"]
 ```
 
 ---
