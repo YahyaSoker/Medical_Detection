@@ -14,7 +14,7 @@ This repository consolidates several medical AI applications that leverage state
 ## 📁 Project Structure
 
 ```
-DAI/
+Medical_Detection/
 ├── Brain_Cancer/                          # Brain tumor classification system
 │   ├── train_model.py                     # Training script with ResNet50
 │   ├── predict_single.py                  # Single image prediction
@@ -30,13 +30,13 @@ DAI/
 │   ├── Yolo_Detection_Mamografi_*.pt      # YOLO detection model
 │   └── pred/                              # Detection results and reports
 │
-├── breast_cancer_GPT/                      # Breast cancer detection with LLM integration
+├── Breast_Cancer_GPT/                      # Breast cancer detection with LLM integration
 │   ├── main.py                            # YOLO + LLM prediction system
 │   ├── app.py                             # Streamlit web interface
 │   ├── llm_local.py                       # Local LLM integration
 │   └── pred/                              # AI-generated reports and predictions
 │
-├── BREAST_FULL_MRI_efficientnet_b3/       # MRI-based breast cancer classification
+├── Breast_Full_Mri_efficientnet_b3/        # MRI-based breast cancer classification
 │   ├── train.py                           # EfficientNet-B3 training
 │   ├── predict.py                         # MRI prediction system
 │   ├── model.py                           # Model architecture definitions
@@ -64,7 +64,18 @@ DAI/
 │   ├── models/                             # Trained weights (e.g., best.pt)
 │   └── results/                            # Training metrics, curves, confusion matrices
 │
-└── Bone_Death_Tissue_Segmentation/         # Bone necrosis tissue segmentation
+├── Bone_Fracture_Segmentation/             # YOLOv8 instance segmentation (fracture masks)
+│   ├── train.py                            # Train YOLOv8-seg model
+│   ├── validate.py                         # Validation metrics & plots
+│   ├── predict.py                          # Run inference on target/ images
+│   └── analysis.py                         # Dataset analysis & statistics
+│
+├── Bone_FractureV2/                        # Dataset merging + 17-class fracture detection
+│   ├── merge_datasets.py                   # Merge datasets / remap classes
+│   ├── check.py                            # Visualize YOLO annotations
+│   └── Merged/                             # Unified dataset (data.yaml + splits)
+│
+└── Bone_Death_Tissue_Segmentation/          # Bone necrosis tissue segmentation
     ├── simple_test.py                     # Tissue segmentation testing
     └── DIA*.pth                           # Trained segmentation models
 ```
@@ -102,7 +113,7 @@ DAI/
   - JSON results export
   - Summary report generation
 
-**breast_cancer_GPT/** - AI-powered diagnostic assistant
+**Breast_Cancer_GPT/** - AI-powered diagnostic assistant
 - **Technology**: YOLO detection + Large Language Models (LLMs)
 - **Task**: Combine detection with intelligent report generation
 - **Features**:
@@ -112,7 +123,7 @@ DAI/
   - Doctor's assistant chat functionality
   - Context-aware medical consultations
 
-**BREAST_FULL_MRI_efficientnet_b3/** - MRI classification system
+**Breast_Full_Mri_efficientnet_b3/** - MRI classification system
 - **Technology**: EfficientNet-B3 with knowledge distillation support
 - **Task**: Classify breast MRI images as Benign or Malignant
 - **Features**:
@@ -162,6 +173,23 @@ DAI/
   - Config-driven training (`data.yaml`)
   - Saved training curves/metrics and confusion matrices under `Bone _Fracture/results/`
   - Trained weights stored under `Bone _Fracture/models/`
+
+**Bone_Fracture_Segmentation/** - Bone fracture instance segmentation (masks + boxes)
+- **Technology**: Ultralytics YOLOv8-seg
+- **Task**: Detect and segment fracture regions in X-ray images
+- **Classes**: 7 classes (see `Bone_Fracture_Segmentation/BoneFractureYolo8/data.yaml`)
+- **Features**:
+  - Dataset analysis (`analysis.py`) with charts/CSV under `output/analysis/`
+  - Training (`train.py`), validation (`validate.py`), and inference (`predict.py`)
+  - Outputs saved under `Bone_Fracture_Segmentation/output/`
+
+**Bone_FractureV2/** - Multi-source dataset merging (17-class detection)
+- **Technology**: Ultralytics YOLO (detection)
+- **Task**: Merge multiple YOLO datasets and train a unified fracture detector
+- **Features**:
+  - Merge/remap classes via `merge_datasets.py` (creates `Merged/data.yaml`)
+  - Annotation visualization via `check.py`
+  - Training outputs under `runs/detect/`
 
 **Bone_Death_Tissue_Segmentation/** - Bone necrosis detection
 - **Technology**: Deep learning segmentation models
@@ -262,7 +290,7 @@ python predict_single.py path/to/brain_scan.jpg
 
 ### Breast Cancer Detection with AI Assistant
 ```bash
-cd breast_cancer_GPT
+cd Breast_Cancer_GPT
 streamlit run app.py
 # Or run the command-line version
 python main.py
@@ -282,9 +310,18 @@ pip install -r requirements.txt
 python train.py --model yolo12s --data data.yaml --epochs 100 --device cuda
 ```
 
+### Bone Fracture Segmentation (YOLOv8-seg)
+```bash
+cd Bone_Fracture_Segmentation
+python analysis.py
+python train.py
+python validate.py
+python predict.py
+```
+
 ### MRI Breast Cancer Classification
 ```bash
-cd BREAST_FULL_MRI_efficientnet_b3
+cd Breast_Full_Mri_efficientnet_b3
 python train.py    # Train model
 python predict.py  # Make predictions
 ```
@@ -327,7 +364,7 @@ This worktree demonstrates a complete medical AI workflow:
 - **Oncology**: Brain cancer, breast cancer detection and segmentation
 - **Dermatology**: Skin cancer detection with interpretable AI (melanoma, basal cell carcinoma, benign lesions)
 - **Dentistry**: Tooth decay and restoration identification
-- **Orthopedics**: Bone fracture detection, bone necrosis tissue segmentation
+- **Orthopedics**: Bone fracture detection, bone fracture segmentation, bone necrosis tissue segmentation
 - **Radiology**: Mammography and MRI analysis
 
 ## ⚠️ Important Notes
