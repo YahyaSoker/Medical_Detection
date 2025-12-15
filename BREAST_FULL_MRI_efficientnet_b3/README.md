@@ -122,7 +122,7 @@ flowchart TD
 flowchart TD
   A[models/*.pth] --> B{Checkpoint format}
   B -->|Legacy: state_dict only| C[Use config default architecture]
-  B -->|New: {state_dict, model_name, ...}| D[Use stored model_name]
+  B -->|New: metadata checkpoint (state_dict + model_name)| D[Use stored model_name]
   C --> E[build model + load_state_dict]
   D --> E
   E --> F[Inference/eval loop]
