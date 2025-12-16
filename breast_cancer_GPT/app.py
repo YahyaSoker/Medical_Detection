@@ -11,9 +11,24 @@ import llm_local
 from main import YOLOPredictor
 
 
+# ============================================================================
+# CONFIGURATION - Modify these paths to match your setup
+# ============================================================================
+
+# YOLO Model Configuration
+# Option 1: Use relative path (default - looks for models/ folder in project root)
 MODELS_DIR = Path("models")
-DEFAULT_MODEL_NAME = "I i_v1"
+DEFAULT_MODEL_NAME = "Yolo_Detection_Mamografi_v1.pt"
 DEFAULT_MODEL_PATH = MODELS_DIR / DEFAULT_MODEL_NAME
+
+# Option 2: Use absolute path (uncomment and modify if your model is elsewhere)
+# DEFAULT_MODEL_PATH = Path(r"C:\path\to\your\model\Yolo_Detection_Mamografi_v1.pt")
+
+# Or use environment variable (set YOLO_MODEL_PATH before running)
+if "YOLO_MODEL_PATH" in os.environ:
+	DEFAULT_MODEL_PATH = Path(os.environ["YOLO_MODEL_PATH"])
+
+# Input/Output Directories
 INPUT_DIR = Path("target")
 OUTPUT_DIR = Path("pred")
 RESULTS_JSON = OUTPUT_DIR / "results" / "predictions.json"
@@ -133,12 +148,17 @@ def ui_sidebar():
 	st.sidebar.title("Controls")
 
 	st.sidebar.subheader("Detection")
-	run_now = st.sidebar.button("Run detection now")
+	run_now = st.sidebar.button("Run detection now", help="Run YOLO detection on all images in target/ directory")
+	
+	st.sidebar.subheader("LLM Explanations")
+	st.sidebar.caption("Generate AI explanations for detection results")
+	generate_all_explanations = st.sidebar.button("Generate explanations for all images", help="Generate LLM explanations for all detected images")
 
 	st.sidebar.subheader("Model")
-	st.sidebar.write(str(DEFAULT_MODEL_PATH))
+	st.sidebar.write(f"YOLO: {DEFAULT_MODEL_PATH.name}")
+	st.sidebar.caption(str(DEFAULT_MODEL_PATH))
 
-	return run_now
+	return run_now, generate_all_explanations
 
 
 def run_detection_pipeline():
@@ -266,6 +286,79 @@ def render_results_panel(results: Dict):
 				st.info(f"No result entry found for image: {selected_image_name}")
 
 
+def generate_explanations_for_all(results: Dict):
+	"""Generate LLM explanations for all images that have detections but no explanation yet"""
+	if not results or not results.get("results"):
+		st.warning("No results available. Run detection first.")
+		return
+	
+	llm = get_llm()
+	if llm is None:
+		st.error("LLM unavailable. Ensure model is accessible and gpt4all installed.")
+		return
+	
+	# Find all images that need explanations
+	images_to_process = []
+	for rec in results.get("results", []):
+		if rec.get("total_detections", 0) > 0 and not rec.get("llm_explanation"):
+			images_to_process.append(rec)
+	
+	if not images_to_process:
+		st.info("All images with detections already have explanations.")
+		return
+	
+	# Process each image
+	progress_bar = st.progress(0)
+	status_text = st.empty()
+	
+	for idx, rec in enumerate(images_to_process):
+		status_text.text(f"Processing {idx + 1}/{len(images_to_process)}: {rec.get('image_name', 'Unknown')}")
+		progress_bar.progress((idx + 1) / len(images_to_process))
+		
+		try:
+			# Check for cancer detections
+			cancer_confs = [d.get("confidence", 0.0) for d in rec.get("detections", []) 
+				if str(d.get("class_name", "")).lower() == "cancer"]
+			max_cancer_conf = max(cancer_confs) if cancer_confs else 0.0
+			
+			if rec.get("total_detections", 0) == 0 or max_cancer_conf < 0.01:
+				answer = "No cancer findings detected by the model in this image. This is not a diagnosis; clinical correlation is recommended."
+			else:
+				prompt = build_explanation_prompt_from_record(rec)
+				with llm.chat_session(system_prompt="You are a concise clinical assistant for imaging results. Avoid medical advice."):
+					answer = llm.generate(
+						prompt,
+						max_tokens=400,
+						temp=0.2,
+						top_p=0.9,
+						top_k=40,
+						repeat_penalty=1.05,
+						streaming=False,
+					)
+			
+			# Update the result
+			rec["llm_explanation"] = answer.strip()
+			
+			# Update in results list
+			for i, r in enumerate(results.get("results", [])):
+				if r.get("image_name") == rec.get("image_name"):
+					results["results"][i] = rec
+					break
+		except Exception as e:
+			st.warning(f"Failed to generate explanation for {rec.get('image_name', 'Unknown')}: {e}")
+			continue
+	
+	# Save updated results
+	try:
+		with open(RESULTS_JSON, "w", encoding="utf-8") as f:
+			json.dump(results, f, indent=2, ensure_ascii=False)
+		status_text.empty()
+		progress_bar.empty()
+		st.success(f"Generated explanations for {len(images_to_process)} image(s).")
+	except Exception as e:
+		st.error(f"Failed to save explanations: {e}")
+
+
 def render_chat_panel(results: Dict):
 	st.subheader("Doctor's Assistant Chat")
 
@@ -317,12 +410,19 @@ def main():
 	st.title("Breast Cancer Doctor's Assistant")
 	st.caption("Run detection, review annotated images and explanations, and chat with the assistant.")
 
-	run_now = ui_sidebar()
+	run_now, generate_all_explanations = ui_sidebar()
 
 	if run_now:
 		run_detection_pipeline()
+		# Reload results after detection
+		results = load_predictions()
+	else:
+		results = load_predictions()
 
-	results = load_predictions()
+	if generate_all_explanations:
+		generate_explanations_for_all(results)
+		# Reload results after generating explanations
+		results = load_predictions()
 
 	tab1, tab2 = st.tabs(["Results", "Chat"])
 	with tab1:

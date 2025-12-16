@@ -160,7 +160,24 @@ def interactive_chat(model_full_path: str, system_prompt: Optional[str] = None) 
 			print()
 
 
-DEFAULT_MODEL_PATH = r"C:\\Users\\yahya\\AppData\\Local\\nomic.ai\\GPT4All\\Meta-Llama-3-8B-Instruct.Q4_0.gguf"
+# ============================================================================
+# LLM MODEL CONFIGURATION - Modify this path to match your LLM model location
+# ============================================================================
+
+# Option 1: Use default GPT4All location (Windows)
+# Uses %LOCALAPPDATA% environment variable to avoid hardcoding username
+_default_gpt4all_path = os.path.join(
+	os.environ.get("LOCALAPPDATA", os.path.expanduser("~")),
+	"nomic.ai", "GPT4All", "qwen2.5-coder-7b-instruct-q4_0.gguf"
+)
+DEFAULT_MODEL_PATH = _default_gpt4all_path
+
+# Option 2: Use custom path (uncomment and modify)
+# DEFAULT_MODEL_PATH = r"C:\path\to\your\llm\model.gguf"
+
+# Option 3: Use environment variable (set LLM_MODEL_PATH before running)
+if "LLM_MODEL_PATH" in os.environ:
+	DEFAULT_MODEL_PATH = os.environ["LLM_MODEL_PATH"]
 
 
 def build_arg_parser() -> argparse.ArgumentParser:

@@ -122,29 +122,8 @@ class YOLOPredictor:
                 }
             }
             
-            # If there are detections, optionally generate a user-facing explanation via local LLM
-            if detections and _LLM_AVAILABLE:
-                try:
-                    prompt = self._build_explanation_prompt(result_data)
-                    explanation = llm_local.generate(
-                        prompt=prompt,
-                        model_full_path=getattr(llm_local, 'DEFAULT_MODEL_PATH', ''),
-                        max_tokens=300,
-                        temperature=0.2,
-                        top_p=0.9,
-                        top_k=40,
-                        repeat_penalty=1.05,
-                        system_prompt=(
-                            "You are a concise, careful assistant. Explain model detections in plain,"
-                            " non-diagnostic terms. Avoid medical advice; describe what the model found"
-                            " and suggest consulting a specialist for interpretation."
-                        ),
-                        stream=False,
-                    )
-                    result_data['llm_explanation'] = explanation.strip()
-                except Exception as e:
-                    # Do not fail the pipeline if LLM isn't available/working
-                    result_data['llm_explanation_error'] = str(e)
+            # LLM explanations are now generated separately via UI, not during detection
+            # This avoids GPU memory conflicts and gives users control over when to use LLM
 
             return result_data
             
@@ -476,8 +455,21 @@ class YOLOPredictor:
 def main():
     """Main function to run the YOLO prediction pipeline"""
     
-    # Configuration
-    MODEL_PATH = os.path.join("models", "Yolo_Detection_Mamografi_31.08.2025.pt")
+    # ============================================================================
+    # CONFIGURATION - Modify these paths to match your setup
+    # ============================================================================
+    
+    # YOLO Model Configuration
+    # Option 1: Use relative path (default - looks for models/ folder in project root)
+    MODEL_PATH = os.path.join("models", "Yolo_Detection_Mamografi_v1.pt")
+    
+    # Option 2: Use absolute path (uncomment and modify if your model is elsewhere)
+    # MODEL_PATH = r"C:\path\to\your\model\Yolo_Detection_Mamografi_v1.pt"
+    
+    # Option 3: Use environment variable (set YOLO_MODEL_PATH before running)
+    if "YOLO_MODEL_PATH" in os.environ:
+        MODEL_PATH = os.environ["YOLO_MODEL_PATH"]
+    
     INPUT_DIR = "target"
     OUTPUT_DIR = "pred"
     
