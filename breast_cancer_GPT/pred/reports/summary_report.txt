@@ -1,7 +1,7 @@
 YOLO PREDICTION SUMMARY REPORT
 ==================================================
-Processing Date: 2025-11-07 22:03:24
-Model: models\Yolo_Detection_Mamografi_31.08.2025.pt
+Processing Date: 2025-12-16 17:54:34
+Model: models\Yolo_Detection_Mamografi_v1.pt
 Input Directory: target
 Output Directory: pred
 
