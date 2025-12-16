@@ -2,7 +2,7 @@
   "model_path": "models\\Yolo_Detection_Mamografi_v1.pt",
   "input_directory": "target",
   "output_directory": "pred",
-  "processing_date": "2025-12-16T17:54:34.098507",
+  "processing_date": "2025-12-16T18:04:21.564096",
   "total_images_processed": 6,
   "results": [
     {
@@ -10,7 +10,7 @@
       "image_path": "target\\1.png",
       "total_detections": 0,
       "detections": [],
-      "processing_time": 44.688900001347065,
+      "processing_time": 49.98900000282447,
       "image_size": {
         "width": 2364,
         "height": 2964
@@ -21,7 +21,7 @@
       "image_path": "target\\1.png",
       "total_detections": 0,
       "detections": [],
-      "processing_time": 17.351900001813192,
+      "processing_time": 10.559799997281516,
       "image_size": {
         "width": 2364,
         "height": 2964
@@ -44,12 +44,12 @@
           "class_name": "cancer"
         }
       ],
-      "processing_time": 17.18590000018594,
+      "processing_time": 70.94320000032894,
       "image_size": {
         "width": 2364,
         "height": 2964
       },
-      "llm_explanation": "**Summary**\n\nThe algorithm detected a potential tumor-like lesion in the image.\n\n**Explanation**\n\nThe model found a possible abnormality in the image, which may be related to cancer. This finding is based on computer analysis of the image data and should be reviewed by a qualified specialist for further interpretation.\n\n**Uncertainty and Limitations**\n\nThe confidence score for this detection is 41%, indicating some uncertainty. The algorithm's ability to accurately detect tumors can be affected by factors such as image quality, patient positioning, and individual variability. Additionally, the model may not account for all possible benign or malignant conditions that could appear similar on an image.\n\n**Possible Explanations**\n\nThe detected abnormality could be a benign cyst or a neoplasm (a type of tumor). Further imaging or clinical evaluation is needed to determine the nature and significance of this finding.\n\n**Next Steps**\n\nRecommend specialist review to determine the next steps for further evaluation and management. Further imaging may be considered to gather more information about the detected abnormality."
+      "llm_explanation": "Here's a summary of the image analysis results:\n\n**Summary:** The algorithm detected a potential abnormality in the image.\n\n**Explanation:** The model found a possible tumor-like structure in the image, which is located at coordinates [1989, 2061, 2323, 2326]. This finding may indicate the presence of cancer, but it's essential to note that this is just an automated detection and not a definitive diagnosis.\n\n**Uncertainty and Limitations:** The algorithm's confidence score is relatively low at 41%, indicating some uncertainty in the detection. There are several possible explanations for this finding, including a benign cyst or a neoplasm. Further analysis and consultation with a qualified specialist are necessary to determine the nature of this abnormality.\n\n**Next Steps:** I recommend that a qualified specialist review these findings and consider further imaging or other diagnostic tests to determine the best course of action. It's also important to note that this detection does not necessarily imply a serious or urgent condition, but it's still essential to consult with a specialist to determine the appropriate next steps.\n\n**No Urgent Features Detected:** There are no red-flag features or signs of rapid growth or compression of vital structures that would require immediate clinical review."
     },
     {
       "image_name": "2.png",
@@ -68,12 +68,12 @@
           "class_name": "cancer"
         }
       ],
-      "processing_time": 17.18590000018594,
+      "processing_time": 70.94320000032894,
       "image_size": {
         "width": 2364,
         "height": 2964
       },
-      "llm_explanation": "**Summary**\n\nThe algorithm detected a potential tumor-like lesion in the image.\n\n**Explanation**\n\nThe model found a possible abnormality in the image, which may be related to cancer. This finding is based on computer analysis of the image data and should be reviewed by a qualified specialist for further interpretation.\n\n**Uncertainty and Limitations**\n\nThe confidence score for this detection is 41%, indicating some uncertainty. The algorithm's ability to accurately detect tumors can be affected by factors such as image quality, patient positioning, and individual variability. Additionally, the model may not account for all possible benign or malignant conditions that could appear similar on an image.\n\n**Possible Explanations**\n\nThe detected abnormality could be a benign cyst or a neoplasm (a type of tumor). Further imaging or clinical evaluation is needed to determine the nature and significance of this finding.\n\n**Next Steps**\n\nRecommend specialist review to determine the next steps for further evaluation and management. Further imaging may be considered to gather more information about the detected abnormality."
+      "llm_explanation": "Here's a summary of the image analysis results:\n\n**Summary:** The algorithm detected a potential abnormality in the image.\n\n**Explanation:** The model found a possible tumor-like structure in the image, which is located at coordinates [1989, 2061, 2323, 2326]. This finding may indicate the presence of cancer, but it's essential to note that this is just an automated detection and not a definitive diagnosis.\n\n**Uncertainty and Limitations:** The algorithm's confidence score is relatively low at 41%, indicating some uncertainty in the detection. There are several possible explanations for this finding, including a benign cyst or a neoplasm. Further analysis and consultation with a qualified specialist are necessary to determine the nature of this abnormality.\n\n**Next Steps:** I recommend that a qualified specialist review these findings and consider further imaging or other diagnostic tests to determine the best course of action. It's also important to note that this detection does not necessarily imply a serious or urgent condition, but it's still essential to consult with a specialist to determine the appropriate next steps.\n\n**No Urgent Features Detected:** There are no red-flag features or signs of rapid growth or compression of vital structures that would require immediate clinical review."
     },
     {
       "image_name": "3.png",
@@ -92,12 +92,12 @@
           "class_name": "cancer"
         }
       ],
-      "processing_time": 16.98009999745409,
+      "processing_time": 10.066699996968964,
       "image_size": {
         "width": 2364,
         "height": 2964
       },
-      "llm_explanation": "**Summary of Detection**\n\nThe algorithm detected a potential abnormality in the image, which may be related to cancer.\n\n**Simple Explanation**\n\nThe model found a possible sign of cancer in the image. This finding suggests that there might be an abnormal growth or lesion present. However, it's essential to consult with a qualified specialist to determine the nature and significance of this finding.\n\n**Confidence Score and Uncertainty**\n\nThe algorithm has a confidence score of 61%, indicating some uncertainty about the accuracy of the detection. Reasons for uncertainty include the complexity of the image and the possibility of false positives or false negatives.\n\n**Possible Explanations**\n\nTwo possible explanations for this finding are:\n\n1. A benign cyst or tumor\n2. Cancer\n\n**Model Limitations**\n\nThe algorithm is not a substitute for human expertise and may not accurately detect all types of abnormalities. Additionally, the model's performance may be affected by factors such as image quality, patient variability, and the complexity of the disease.\n\n**Next Steps**\n\nRecommend specialist review to determine the nature and significance of this finding. Further imaging or diagnostic tests may be considered to gather more information.\n\n**No Urgent Features Detected**\n\nThere are no red-flag features detected that would require immediate clinical review."
+      "llm_explanation": "**Summary:**\n\nThe algorithm detected a potential abnormality in the image.\n\n**Explanation:**\n\nThe model found a possible cancerous growth in the image. This finding is based on computer analysis of the image, but it's essential to consult with a qualified specialist for a definitive interpretation and further guidance.\n\n**Confidence Score:**\n\nThe confidence score is 61%, indicating that while the algorithm detected something unusual, there is still some uncertainty about the nature of the finding.\n\n**Possible Explanations:**\n\nThere are several possible explanations for this finding, including a benign cyst or a neoplasm. A specialist would need to review the image and consider additional factors, such as patient history and symptoms, to determine the most likely explanation.\n\n**Model Limitations:**\n\nThe algorithm is not perfect and may not always accurately detect abnormalities. Additionally, it's possible that the finding could be due to other factors not accounted for in the model.\n\n**Next Steps:**\n\nRecommend specialist review to determine the best course of action. Further imaging or additional testing may be considered to gather more information about the potential abnormality.\n\n**No Urgent Features Detected:**\n\nThere are no red-flag features detected that would require immediate clinical review."
     },
     {
       "image_name": "3.png",
@@ -116,12 +116,12 @@
           "class_name": "cancer"
         }
       ],
-      "processing_time": 16.98009999745409,
+      "processing_time": 10.066699996968964,
       "image_size": {
         "width": 2364,
         "height": 2964
       },
-      "llm_explanation": "**Summary of Detection**\n\nThe algorithm detected a potential abnormality in the image, which may be related to cancer.\n\n**Simple Explanation**\n\nThe model found a possible sign of cancer in the image. This finding suggests that there might be an abnormal growth or lesion present. However, it's essential to consult with a qualified specialist to determine the nature and significance of this finding.\n\n**Confidence Score and Uncertainty**\n\nThe algorithm has a confidence score of 61%, indicating some uncertainty about the accuracy of the detection. Reasons for uncertainty include the complexity of the image and the possibility of false positives or false negatives.\n\n**Possible Explanations**\n\nTwo possible explanations for this finding are:\n\n1. A benign cyst or tumor\n2. Cancer\n\n**Model Limitations**\n\nThe algorithm is not a substitute for human expertise and may not accurately detect all types of abnormalities. Additionally, the model's performance may be affected by factors such as image quality, patient variability, and the complexity of the disease.\n\n**Next Steps**\n\nRecommend specialist review to determine the nature and significance of this finding. Further imaging or diagnostic tests may be considered to gather more information.\n\n**No Urgent Features Detected**\n\nThere are no red-flag features detected that would require immediate clinical review."
+      "llm_explanation": "**Summary:**\n\nThe algorithm detected a potential abnormality in the image.\n\n**Explanation:**\n\nThe model found a possible cancerous growth in the image. This finding is based on computer analysis of the image, but it's essential to consult with a qualified specialist for a definitive interpretation and further guidance.\n\n**Confidence Score:**\n\nThe confidence score is 61%, indicating that while the algorithm detected something unusual, there is still some uncertainty about the nature of the finding.\n\n**Possible Explanations:**\n\nThere are several possible explanations for this finding, including a benign cyst or a neoplasm. A specialist would need to review the image and consider additional factors, such as patient history and symptoms, to determine the most likely explanation.\n\n**Model Limitations:**\n\nThe algorithm is not perfect and may not always accurately detect abnormalities. Additionally, it's possible that the finding could be due to other factors not accounted for in the model.\n\n**Next Steps:**\n\nRecommend specialist review to determine the best course of action. Further imaging or additional testing may be considered to gather more information about the potential abnormality.\n\n**No Urgent Features Detected:**\n\nThere are no red-flag features detected that would require immediate clinical review."
     }
   ]
 }

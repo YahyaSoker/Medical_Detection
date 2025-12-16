@@ -189,8 +189,14 @@ class YOLOPredictor:
         except Exception as e:
             print(f"Error saving prediction image for {image_path.name}: {e}")
     
-    def process_all_images(self):
-        """Process all images in the input directory"""
+    def process_all_images(self, progress_callback=None, status_callback=None):
+        """
+        Process all images in the input directory
+        
+        Args:
+            progress_callback: Optional function(progress: float) to update progress (0.0 to 1.0)
+            status_callback: Optional function(message: str) to update status text
+        """
         print(f"\nStarting prediction on all images in: {self.input_dir}")
         
         # Get all image files
@@ -201,9 +207,16 @@ class YOLOPredictor:
             print("No image files found!")
             return
         
+        total_images = len(image_files)
+        
         # Process each image
         for i, image_path in enumerate(image_files, 1):
-            print(f"\n[{i}/{len(image_files)}] Processing: {image_path.name}")
+            if status_callback:
+                status_callback(f"Processing {i}/{total_images}: {image_path.name}")
+            if progress_callback:
+                progress_callback(i / total_images)
+            
+            print(f"\n[{i}/{total_images}] Processing: {image_path.name}")
             
             # Run prediction
             result_data = self.predict_single_image(image_path)
@@ -217,7 +230,12 @@ class YOLOPredictor:
             
             print(f"Completed: {image_path.name}")
         
-        print(f"\nCompleted processing {len(image_files)} images!")
+        if status_callback:
+            status_callback("Detection completed!")
+        if progress_callback:
+            progress_callback(1.0)
+        
+        print(f"\nCompleted processing {total_images} images!")
     
     def save_results_json(self):
         """Save all results to JSON file"""

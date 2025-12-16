@@ -169,11 +169,52 @@ def run_detection_pipeline():
 		st.error(f"Input directory not found: {INPUT_DIR}")
 		return
 
-	with st.spinner("Running detection... this may take a while"):
+	# Initialize progress bar and status
+	progress_bar = st.progress(0)
+	status_text = st.empty()
+	status_text.text("Initializing detection pipeline...")
+	
+	try:
+		# Create predictor
 		predictor = YOLOPredictor(str(DEFAULT_MODEL_PATH), str(INPUT_DIR), str(OUTPUT_DIR))
 		predictor.enable_doctor_assistant = False
-		predictor.run_complete_pipeline()
-	st.success("Detection completed.")
+		
+		# Get image count for progress tracking
+		image_files = predictor.get_image_files()
+		total_images = len(image_files)
+		
+		if total_images == 0:
+			st.warning("No images found in target/ directory.")
+			progress_bar.empty()
+			status_text.empty()
+			return
+		
+		status_text.text(f"Found {total_images} image(s). Starting detection...")
+		
+		# Process images with progress updates
+		predictor.process_all_images(
+			progress_callback=lambda p: progress_bar.progress(p),
+			status_callback=lambda msg: status_text.text(msg)
+		)
+		
+		# Save results and generate report
+		status_text.text("Saving results...")
+		predictor.save_results_json()
+		
+		status_text.text("Generating summary report...")
+		predictor.generate_summary_report()
+		
+		# Clean up progress indicators
+		progress_bar.empty()
+		status_text.empty()
+		
+		st.success(f"Detection completed! Processed {total_images} image(s).")
+		
+	except Exception as e:
+		progress_bar.empty()
+		status_text.empty()
+		st.error(f"Detection failed: {e}")
+		raise
 
 
 def render_results_panel(results: Dict):
